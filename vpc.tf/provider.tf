@@ -8,7 +8,7 @@ terraform {
   backend "s3" {
     bucket = "hjbhjbwehjbe"
     region = "us-east-1"
-    key = "01-07-STATEFILES-VPC"
+    key = "01-07-STATEFILE-VPC"
     use_lockfile = true
     encrypt = true
   }
