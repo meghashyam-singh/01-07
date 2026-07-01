@@ -58,7 +58,7 @@ resource "aws_security_group_rule" "frontend_ingress_rule" {
     to_port = 80
     protocol = "tcp"
     security_group_id = data.aws_ssm_parameter.frontend_sg_id.value
-    source_security_group_id = data.aws_ssm_parameter.frontend_alb_alb_sg_id.value
+    source_security_group_id = data.aws_ssm_parameter.frontend_alb_sg_id.value
 }
 
 resource "aws_security_group_rule" "backend_alb_ingress_rule" {
