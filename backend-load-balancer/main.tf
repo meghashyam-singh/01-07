@@ -3,5 +3,5 @@ resource "aws_lb" "backend" {
     name = "${local.common_name}-backend-alb"
     internal = true
     security_groups = [ data.aws_ssm_parameter.backend_alb_sg_id.value ]
-    subnets = split(",", data.aws_ssm_parameter.private_subnet_ids)
+    subnets = split(",", data.aws_ssm_parameter.private_subnet_ids.value)
 }
