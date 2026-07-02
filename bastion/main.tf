@@ -6,4 +6,7 @@ resource "aws_instance" "bastion" {
     tags = {
         Name = "${local.common_name}_bastion"
     }
+    lifecycle {
+      create_before_destroy = true
+    }
 }
